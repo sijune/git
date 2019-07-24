@@ -41,36 +41,8 @@ git reset --soft "~~" : 수정사항은 그대로 두고 해당 버전으로 가
 협업할때는 git reset을 막 사용하면 안됨.
 
 git revert 는 버전을 돌림과 동시에 버전을 보존시킨다.
-참고만 하기.
+참고만 하자.
 message4에서 message1을 돌리기 위해서는 역순으로 하나씩 모두 해줘야 한다.
 git revert "~~"
 git revert "~~"
 git revert "~~"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
