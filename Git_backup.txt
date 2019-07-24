@@ -1,0 +1,29 @@
+hosting을 이용할 것이다.
+원격으로 서버를 임대해준다.
+git hosting: 로컬저장소를 원격저장소에 저장할 수 있게 한다.
+원격 저장소를 임대한다.
+
+로컬저장소 ------------- 원격저장소
+com1 ---push---> remote
+
+com2<---clone--- remote
+com2---push--->remote
+
+com1<---pull---remote
+com1---push--->remote
+
+com2<---pull---remote
+com2---push--->remote
+
+*어떻게 서로 연결시킬수 있을까?
+서로 통신을 해야한다. => HTTP, SSH 등을 써야한다.
+우리는 HTTP를 쓸 꺼다.
+
+git remote add origin https://~~~
+//원격저장소를 더하겠다. 뒤에있는 주소의 별명을 origin으로 하겠다.
+git remote -v
+//원격저장소의 주소를 볼 수 있다.
+
+git push -u origin master
+//-u: set-upstream 기본 스트림 설정
+//때에 따라서 인증을 요구할 수도 있다.
