@@ -1,0 +1,76 @@
+﻿* Version Control.
+-버전관리의 시작
+git init .//현재 폴더초기화 .git의 생성
+.git에 버전이 관리된다.
+없어지면 역사가 사라진다.
+
+repository, 버전이 저장되어 있는곳.
+working tree 버전으로 만들어 지기 전단계
+staging area, 10개의 파일 중 2개만 파일을 버전으로 만들겠다.
+
+nano hello1.txt: cli로 글 작성
+git add hello1.txt: staging area로 보낸다.
+git commit -m "Message 1": repository로 보낸다.
+git status: 현재 어디있는지 확인
+git log: 커밋된 기록을 추적
+
+git add . 함께 staging으로 옮길 수 있다.
+git log --stat: 무슨 파일이 커밋에 반영되었나 확인
+
+git diff: staging area에서 이전과 무엇이 변했는지 알려준다.
+git reset --hard: 기존 버전으로 초기화
+
+cat hello1.txt: cli로 글을 볼 수 있다.
+git log -p: 지금까지 내용을 단순기록과 함께 내용도 보여준다.
+
+master는 현재버전을 뜻한다.
+git log를 치고 나오는 commit번호를 복사
+-> git checkout 1d113~~
+이전버전으로 돌아간다.
+git checkout master: 기존 master였던 상태로 돌아간다.
+
+git commit -am "message 4"는 add와 커밋을 동시에
+git commit -m "~~":에서 -m은 커맨드에서 커밋메세지 작성을 뜻함
+git commit만 치면 commit메세지를 칠 수 있는 에디터가 나온다.
+글 작성 후 저장하면 해당 버전의 커밋메세지로 버전이 저장된다.
+
+git config --global core.editor "nano" : git의 기본 에디터 변경
+
+git reset --hard "57ae5a~": 해당 버전으로 가겠다. 이전 버전은 삭재
+git reset --soft "~~" : 수정사항은 그대로 두고 해당 버전으로 가겠다.
+협업할때는 git reset을 막 사용하면 안됨.
+
+git revert 는 버전을 돌림과 동시에 버전을 보존시킨다.
+참고만 하기.
+message4에서 message1을 돌리기 위해서는 역순으로 하나씩 모두 해줘야 한다.
+git revert "~~"
+git revert "~~"
+git revert "~~"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
