@@ -27,3 +27,20 @@ git remote -v
 git push -u origin master
 //-u: set-upstream 기본 스트림 설정
 //때에 따라서 인증을 요구할 수도 있다.
+
+----------------------------------------------------------------
+git clone http://~~
+git remote -v로 원격 저장소 확인 가능
+
+작업전 pull실행
+git pull
+//원격 저장소와 동기화
+git push
+//작업이후 add commit push 하기
+
+git log를 통해 확인 가능
+
+
+<추가>
+ssh를 통해 자동으로 원격저장소에 로그인 할 수 있다.
+issue tracker는 이슈를 추적할 수 있다.
